@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <title>index</title>
+        <style>
+            body{
+                height: auto;
+                margin: 0%;
+            }
+            header h1{
+                background-color: red;
+                text-align: center;
+                margin: 0%;
+                padding: 20px;
+            }
+            #navigation{
+                position: sticky;
+                top: 0%;
+                z-index: 1;
+            }
+            .menu{
+                margin: 0%;
+                background-color: gray;
+            }
+            .menu li a{
+                color: white;
+                font-size: 20px;
+                text-decoration: none;
+            }
+            .menu li{
+                padding: 10px;
+                display: inline-block;
+            }
+            .menu li:hover{
+                background-color: rgba(0, 0, 0, 0.7);
+            }
+            .menu li:nth-child(2):hover #drop1, .menu li:nth-child(3):hover #drop2{
+                display: block;
+            }
+            #drop1, #drop2{
+                position: absolute;
+                width: auto;
+                max-width: 150px;
+                display: none;
+                top: 42px;
+                background-color: whitesmoke;
+                padding: 0%;
+            }
+            #drop1 li, #drop2 li{
+                display: block;
+            }
+            #drop1 li:hover , #drop2 li:hover {
+                background-color: gainsboro;
+            }
+            #drop1 li a, #drop2 li a{
+                color: steelblue;
+                font-size: 16px;
+            }
+        </style>
+    </head>
+    <body>
+        <header><h1>Demo of DropDown</h1></header>
+        <nav id="navigation">
+            <ul class="menu">
+                <li><a href="GmailAccount.html">Link 1</a></li>
+                <li>
+                    <a href="Animate.html">Link 2</a>
+                    <ul id="drop1">
+                        <li><a href="#">DLink1</a></li>
+                        <li><a href="#">DLink2</a></li>
+                        <li><a href="#">DLink3</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Link 3</a>
+                    <ul id="drop2">
+                        <li><a href="#">DLink1</a></li>
+                        <li><a href="#">DLink2</a></li>
+                        <li><a href="#">DLink3</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+        </nav>
+    </body>
+</html>
